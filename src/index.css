@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/30 dark:bg-black/30 backdrop-blur-[80px] backdrop-saturate-150 border border-white/50 dark:border-white/20 rounded-[3rem] shadow-[0_16px_40px_rgba(0,0,0,0.1),inset_0_2px_4px_rgba(255,255,255,0.5)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.1)] overflow-hidden;
+    -webkit-backdrop-filter: blur(80px) saturate(150%);
+  }
+  
+  .glass-button {
+    @apply bg-white/40 dark:bg-black/40 backdrop-blur-[60px] backdrop-saturate-150 border border-white/60 dark:border-white/20 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.08),inset_0_2px_4px_rgba(255,255,255,0.6)] dark:shadow-[0_8px_20px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(255,255,255,0.1)] transition-all duration-300;
+    -webkit-backdrop-filter: blur(60px) saturate(150%);
+  }
+
+  .glass-button:hover {
+    @apply bg-white/60 dark:bg-white/10 shadow-[0_12px_24px_rgba(0,0,0,0.15),inset_0_2px_6px_rgba(255,255,255,0.8)] dark:shadow-[0_12px_24px_rgba(0,0,0,0.4),inset_0_2px_6px_rgba(255,255,255,0.2)] scale-[1.02] border-white/80 dark:border-white/30;
+  }
+  
+  .glass-button:active {
+    @apply scale-[0.96] shadow-[0_4px_10px_rgba(0,0,0,0.1),inset_0_1px_2px_rgba(255,255,255,0.5)] dark:shadow-[0_4px_10px_rgba(0,0,0,0.3),inset_0_1px_2px_rgba(255,255,255,0.1)];
+  }
+}
+
+
+

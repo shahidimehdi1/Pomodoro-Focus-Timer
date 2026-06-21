@@ -1,0 +1,6 @@
+{
+  "name": "focus-timer",
+  "description": "A minimal Pomodoro-style focus timer designed for users with attention problems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
